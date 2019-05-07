@@ -1,3 +1,5 @@
+libXt-devel
+mesa-libGLU-devel
 mesa-libGL
 mesa-dri-drivers
 libselinux

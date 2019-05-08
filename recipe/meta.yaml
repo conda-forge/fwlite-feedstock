@@ -84,7 +84,7 @@ test:
     commands:
       - ldd ${CONDA_PREFIX}/bin/cmsShow.exe  # [linux]
       - otool -L ${CONDA_PREFIX}/bin/cmsShow.exe  # [osx]
-      - xvfb-run -a cmsShow.exe --soft --help  # [linux]
+      - xvfb-run -s '-screen 0 1024x768x24' cmsShow.exe --soft --help  # [linux]
       - cmsShow.exe --help  # [osx]
 
 about:

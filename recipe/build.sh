@@ -5,11 +5,15 @@ set -e
 cp -r src "${PREFIX}"
 cp -rv data "${PREFIX}"
 
+
+PYDOTVER=$(python${PY_VER}-config --libs | sed -E 's@-l@@g'| awk '{print $1}')
+
 # set graphics library to link
 if [ "$(uname)" == "Linux" ]; then
-    cmake_args="-Dgraphicslib=GX11"
+    cmake_args="-Dgraphicslib=GX11 -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
+    export CXXFLAGS="${CXXFLAGS}"
 else
-    cmake_args="-Dgraphicslib=GCocoa -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT}"
+    cmake_args="-Dgraphicslib=GCocoa -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
 
     # Remove -std=c++14 from build ${CXXFLAGS} and add -std=c++1z
     CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')

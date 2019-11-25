@@ -23,7 +23,7 @@ source:
     folder: data
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -49,7 +49,7 @@ requirements:
     - libuuid
     - pybind11
     - python
-    - root
+    - root_base
     - tbb
     - tinyxml2
     - xerces-c

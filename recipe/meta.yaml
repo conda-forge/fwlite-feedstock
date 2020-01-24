@@ -23,13 +23,14 @@ source:
     folder: data
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
     - cmake
     - git
     - sed
@@ -49,7 +50,7 @@ requirements:
     - libuuid
     - pybind11
     - python
-    - root
+    - root_base
     - tbb
     - tinyxml2
     - xerces-c

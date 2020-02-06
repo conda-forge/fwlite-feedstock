@@ -42,7 +42,7 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
   host:
-    - boost =1.68.0
+    - boost
     - clhep =2.4.0.2
     - cms-md5
     - hepmc2

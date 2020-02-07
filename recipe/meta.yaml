@@ -1,5 +1,5 @@
 {% set name = "fwlite" %}
-{% set version = "11.0.0" %}
+{% set version = "11.0.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: 9ff6f482c6f9bc45566c4d478c435beb13d0de35d6e4a1635c52f2da9fd2a6d3
+    sha256: 9d32e4e988a4afbd6753bd5b358ace3f3ec5ae13fabb80c7ad7282c612691b4b
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-05-04.tar.gz
     sha256: 741dd882851b8d1715a0e299da904fec75b4e5eb35b021d12f6536214b77566b
@@ -42,7 +42,7 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
   host:
-    - boost =1.68.0
+    - boost 
     - clhep =2.4.0.2
     - cms-md5
     - hepmc2

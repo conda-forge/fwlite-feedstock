@@ -1,5 +1,5 @@
 {% set name = "fwlite" %}
-{% set version = "11.0.0.1" %}
+{% set version = "11.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: 055efea9e39000a4bb781e3b983429c8a486a97b4e20a80e52564b87acf92577
+    sha256: 9a0c2409dd610decc9207dd2c9dd6ea2c56cacdb42f47f196b714d59bfb2538f
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-05-04.tar.gz
     sha256: 741dd882851b8d1715a0e299da904fec75b4e5eb35b021d12f6536214b77566b

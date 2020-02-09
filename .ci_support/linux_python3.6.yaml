@@ -1,4 +1,4 @@
-boost:
+boost_cpp:
 - 1.70.0
 c_compiler:
 - gcc
@@ -23,7 +23,7 @@ libjpeg_turbo:
 libuuid:
 - 2.32.1
 pin_run_as_build:
-  boost:
+  boost-cpp:
     max_pin: x.x.x
   libjpeg_turbo:
     max_pin: x

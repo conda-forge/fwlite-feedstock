@@ -1,5 +1,5 @@
 {% set name = "fwlite" %}
-{% set version = "11.0.0" %}
+{% set version = "11.0.0.2" %}
 
 package:
   name: {{ name|lower }}

@@ -42,7 +42,7 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
   host:
-    - boost 
+    - boost-cpp 
     - clhep =2.4.0.2
     - cms-md5
     - hepmc2
@@ -67,7 +67,7 @@ requirements:
     - xz
     - zlib
   run:
-    - {{ pin_compatible('boost', max_pin='x.x') }}
+    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('clhep', max_pin='x.x.x.x') }}
     - cms-md5
     - hepmc2

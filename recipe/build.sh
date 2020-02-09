@@ -7,7 +7,7 @@ cp -rv data "${PREFIX}"
 
 
 PYDOTVER=$(python${PY_VER}-config --libs | sed -E 's@-l@@g'| awk '{print $1}')
-
+echo $PYDOTVER
 # set graphics library to link
 if [ "$(uname)" == "Linux" ]; then
     cmake_args="-Dgraphicslib=GX11 -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
@@ -15,9 +15,9 @@ if [ "$(uname)" == "Linux" ]; then
 else
     cmake_args="-Dgraphicslib=GCocoa -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
 
-    # Remove -std=c++14 from build ${CXXFLAGS} and add -std=c++1z
+    # Remove -std=c++14 from build ${CXXFLAGS} and use cmake to set std flags
     CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')
-    export CXXFLAGS="${CXXFLAGS} -std=c++1z"
+    export CXXFLAGS
 fi
 
 export BLDDIR=${PWD}/build-dir
@@ -27,6 +27,8 @@ cd ${BLDDIR}
 cmake -LAH \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     ${cmake_args} \
+    -DCMAKE_CXX_STANDARD=17 \
+    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
     ../src
 
 make -j${CPU_COUNT}

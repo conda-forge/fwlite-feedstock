@@ -42,6 +42,8 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '3.8'
+root:
+- 6.18.04
 root_base:
 - 6.18.04
 root_binaries:

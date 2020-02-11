@@ -51,6 +51,7 @@ requirements:
     - libjpeg-turbo
     - pybind11
     - python
+    - root
     - root_base
     - root-binaries
     - root-dependencies
@@ -74,6 +75,7 @@ requirements:
     - libsigcpp
     - libjpeg-turbo
     - python
+    - root
     - root_base
     - root-binaries
     - root-dependencies

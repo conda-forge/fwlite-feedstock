@@ -39,11 +39,11 @@ pin_run_as_build:
 python:
 - '3.7'
 root:
-- 6.18.04
+- 6.20.0
 root_base:
-- 6.18.04
+- 6.20.0
 root_binaries:
-- 6.18.04
+- 6.20.0
 xz:
 - '5.2'
 zlib:

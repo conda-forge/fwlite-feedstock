@@ -41,13 +41,9 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- '3.7'
-root:
-- 6.20.0
+- 3.8.* *_cpython
 root_base:
-- 6.20.0
-root_binaries:
-- 6.20.0
+- 6.20.2
 xz:
 - '5.2'
 zlib:

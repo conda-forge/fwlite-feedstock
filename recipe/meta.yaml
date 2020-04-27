@@ -47,6 +47,7 @@ requirements:
     - cms-md5
     - hepmc2
     - libsigcpp
+    - sigcpp-2.0
     - libuuid
     - libjpeg-turbo
     - pybind11

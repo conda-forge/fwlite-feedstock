@@ -4,9 +4,6 @@ set -e
 # copy source and geometry files to install dir
 cp -r src "${PREFIX}"
 cp -rv data "${PREFIX}"
-cd "${PREFIX}/Fireworks/Geometry/data"
-curl -OL $(cat cmsGeom2026.root.url  | tail -1)
-cd -
 
 PYDOTVER=$(python${PY_VER}-config --libs | sed -E 's@-l@@g'| awk '{print $1}')
 echo $PYDOTVER

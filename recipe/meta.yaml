@@ -15,12 +15,15 @@ source:
   - url: https://github.com/cms-data/DataFormats-PatCandidates/archive/V01-00-01.tar.gz
     sha256: 5a0941df5a191d0f942e26838103659970ba29cb9cd4ab3d0cc45bcc01b408df
     folder: data/DataFormats/PatCandidates/data
-  - url: http://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_0/RelValTTbarLepton_MINIAOD.root
+  - url: http://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_0/RelValTTbarLepton_Miniaod.root
     sha256: 6edb4763a38ee13dca037fa8898720af5421790a789b6e9b2af516448005a133
     folder: data
   - url: http://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_0/RelValZpMM_RECO.root
     sha256: d4c79e4549dfb37d1111240fa3c1ae001f7ed10a6487215fb81fd0b197374f2e
     folder: data
+  - url: http://cmsrep.cern.ch/cmssw/download/Fireworks-Geometry/20200401/cmsGeom2026.root
+    sha256: 3077e4d9abd62c57d1d71b30fa968ba52a7c12879a7fc71d90d94c4123e426fa
+    folder: data/Fireworks/Geometry/data
 
 build:
   number: 1

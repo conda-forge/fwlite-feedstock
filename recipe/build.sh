@@ -5,7 +5,6 @@ set -e
 cp -r src "${PREFIX}"
 cp -rv data "${PREFIX}"
 
-
 PYDOTVER=$(python${PY_VER}-config --libs | sed -E 's@-l@@g'| awk '{print $1}')
 echo $PYDOTVER
 # set graphics library to link

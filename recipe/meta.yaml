@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: 07861b477f25e2b372bf44dec981d2e82cdbcf616e05ff01390e9d9ba3823187
+    sha256: cd1346cec4dc48db153cc197d718036e1298a56dc244f9f3c1a35a0709d7eb22
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b

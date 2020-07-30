@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: cd1346cec4dc48db153cc197d718036e1298a56dc244f9f3c1a35a0709d7eb22
+    sha256: 1e2d62dbd9ec3ab01cf8ab669c090c66c0bf9607aad5939c3a7bf262f0ed6e3b
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b
@@ -15,11 +15,8 @@ source:
   - url: https://github.com/cms-data/DataFormats-PatCandidates/archive/V01-00-01.tar.gz
     sha256: 5a0941df5a191d0f942e26838103659970ba29cb9cd4ab3d0cc45bcc01b408df
     folder: data/DataFormats/PatCandidates/data
-  - url: http://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_0/RelValTTMiniaod.root
-    sha256: cfaaef76a5c56138af429ce4304cfef8c6c272e66417d12ca7169cb44ab97aaf
-    folder: data
-  - url: http://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_0/RelValTTBarReco.root
-    sha256: bf4640565f9dc1c29bd52a406ab937145720bf1f26a25e4216a2453c53d140d5
+  - url: http://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_1/RelValZZ.root
+    sha256: 4ce2449962d2ec00cc3fe275cfd9ac92e85e9705462b5fc5a29c2358241ca1e1
     folder: data
   - url: http://cmsrep.cern.ch/cmssw/download/Fireworks-Geometry/20200401/cmsGeom2026.root
     sha256: 3077e4d9abd62c57d1d71b30fa968ba52a7c12879a7fc71d90d94c4123e426fa

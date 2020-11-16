@@ -5,7 +5,7 @@ boost_cpp:
 c_compiler:
 - clang
 c_compiler_version:
-- '10'
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -13,11 +13,11 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '10'
+- '11'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '7.5'
+- '7'
 libjpeg_turbo:
 - '2'
 libuuid:
@@ -41,11 +41,15 @@ pin_run_as_build:
 python:
 - 3.6.* *_cpython
 root_base:
-- '6.20'
+- '6.22'
 target_platform:
 - osx-64
 xz:
 - '5.2'
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
 zlib:
 - '1.2'
 zstd:

@@ -125,7 +125,6 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-fwlite-green.svg)](https://anaconda.org/conda-forge/fwlite) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/fwlite.svg)](https://anaconda.org/conda-forge/fwlite) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/fwlite.svg)](https://anaconda.org/conda-forge/fwlite) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/fwlite.svg)](https://anaconda.org/conda-forge/fwlite) |
 
-
 Installing fwlite
 =================
 
@@ -147,13 +146,6 @@ It is possible to list all of the versions of `fwlite` available on your platfor
 conda search fwlite --channel conda-forge
 ```
 
-Installing fwlite in it's own environment
-=========================================
-```
-conda create -c conda-forge -n fwlite-1115 fwlite=11.1.5
-conda activate fwlite-1115
-cmsShow.exe $CONDA_PREFIX/data/RelValZZ.root
-```
 
 About conda-forge
 =================

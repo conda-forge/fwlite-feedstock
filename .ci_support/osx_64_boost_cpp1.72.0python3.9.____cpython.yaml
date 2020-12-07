@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.14'
 boost_cpp:
-- 1.74.0
+- 1.72.0
 c_compiler:
 - clang
 c_compiler_version:
@@ -39,7 +39,7 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.9.* *_cpython
 root_base:
 - '6.22'
 target_platform:

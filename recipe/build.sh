@@ -27,7 +27,7 @@ cmake -LAH \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     ${cmake_args} \
     -DCMAKE_CXX_STANDARD=17 \
-    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
+    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     ../src
 

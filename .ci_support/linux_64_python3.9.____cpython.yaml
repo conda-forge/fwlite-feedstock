@@ -1,5 +1,5 @@
 boost_cpp:
-- 1.72.0
+- 1.74.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -50,6 +50,8 @@ zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
   - fortran_compiler_version
+- - cdt_name
+  - docker_image
 zlib:
 - '1.2'
 zstd:

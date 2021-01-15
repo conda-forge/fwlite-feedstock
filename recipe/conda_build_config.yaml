@@ -1,2 +1,2 @@
 MACOSX_DEPLOYMENT_TARGET:  # [osx]
-  - 10.15                  # [osx]
+  - 11.1                  # [osx]

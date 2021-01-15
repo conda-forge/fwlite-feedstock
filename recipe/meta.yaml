@@ -95,7 +95,7 @@ requirements:
     - zstd
 
   run_constrained:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.1") }}  # [osx]
 
 test:
     commands:

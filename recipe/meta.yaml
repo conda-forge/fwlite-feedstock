@@ -1,5 +1,5 @@
 {% set name = "fwlite" %}
-{% set version = "11.1.5" %}
+{% set version = "11.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: f069f21cd82c3f59145e52afd33bf70ae2ec3a7d54877d69128d43a0eea51302
+    sha256: 7929d598623816c463334d58c2d1eed0d07f96dd34f67b44f2b0748f27a13d0e
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b
@@ -23,8 +23,8 @@ source:
     folder: data/Fireworks/Geometry/data
 
 build:
-  number: 2
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
@@ -42,7 +42,7 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
   host:
-    - boost-cpp 
+    - boost-cpp
     - clhep =2.4.1.3
     - cms-md5
     - hepmc2
@@ -98,15 +98,15 @@ requirements:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]
 
 test:
-    commands:
-      - ldd ${CONDA_PREFIX}/bin/cmsShow.exe  # [linux]
-      - otool -L ${CONDA_PREFIX}/bin/cmsShow.exe  # [osx]
-      - xvfb-run -s '-screen 0 1024x768x24' cmsShow.exe --soft --help  # [linux]
-      - cmsShow.exe --help  # [osx]
+  commands:
+    - ldd ${CONDA_PREFIX}/bin/cmsShow.exe    # [linux]
+    - otool -L ${CONDA_PREFIX}/bin/cmsShow.exe    # [osx]
+    - xvfb-run -s '-screen 0 1024x768x24' cmsShow.exe --soft --help    # [linux]
+    - cmsShow.exe --help    # [osx]
 
 about:
   home: http://cms-sw.github.io/cmssw
-  summary: "Fireworks is the event display application for the CMS Experiment"
+  summary: Fireworks is the event display application for the CMS Experiment
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE

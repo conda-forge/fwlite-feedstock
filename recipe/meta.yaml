@@ -23,7 +23,7 @@ source:
     folder: data/Fireworks/Geometry/data
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
 
 requirements:

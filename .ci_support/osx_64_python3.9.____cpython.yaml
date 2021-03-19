@@ -1,21 +1,19 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.14'
 boost_cpp:
-- 1.72.0
+- 1.74.0
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '9'
-cdt_name:
-- cos6
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '9'
-docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- '11'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
@@ -24,6 +22,8 @@ libjpeg_turbo:
 - '2'
 libuuid:
 - 2.32.1
+macos_machine:
+- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -39,11 +39,15 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.6.* *_cpython
+- 3.9.* *_cpython
 root_base:
-- '6.22'
+- 6.22.6
 target_platform:
-- linux-64
+- osx-64
+tbb:
+- '2020'
+tbb_devel:
+- '2020'
 xz:
 - '5.2'
 zip_keys:

@@ -23,7 +23,7 @@ source:
     folder: data/Fireworks/Geometry/data
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win]
 
 requirements:
@@ -52,10 +52,7 @@ requirements:
     - libjpeg-turbo
     - pybind11
     - python
-    - root
     - root_base
-    - root-binaries
-    - root-dependencies
     - tbb
     - tbb-devel
     - tinyxml2
@@ -77,10 +74,6 @@ requirements:
     - libsigcpp
     - libjpeg-turbo
     - python
-    - root
-    - root_base
-    - root-binaries
-    - root-dependencies
     - tbb
     - tbb-devel
     - tinyxml2

@@ -48,6 +48,8 @@ tbb:
 - '2020'
 tbb_devel:
 - '2020'
+tinyxml2:
+- '9'
 xz:
 - '5.2'
 zip_keys:

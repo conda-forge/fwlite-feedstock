@@ -1,5 +1,5 @@
 {% set name = "fwlite" %}
-{% set version = "11.1.5" %}
+{% set version = "11.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: f069f21cd82c3f59145e52afd33bf70ae2ec3a7d54877d69128d43a0eea51302
+    sha256: 30e0c87a3e921d6b0d829add25565e69fa26b0f4fa38ffdfb9746d0288a31a27
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b
@@ -15,15 +15,18 @@ source:
   - url: https://github.com/cms-data/DataFormats-PatCandidates/archive/V01-00-01.tar.gz
     sha256: 5a0941df5a191d0f942e26838103659970ba29cb9cd4ab3d0cc45bcc01b408df
     folder: data/DataFormats/PatCandidates/data
-  - url: http://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_1/RelValZZ.root
-    sha256: 4ce2449962d2ec00cc3fe275cfd9ac92e85e9705462b5fc5a29c2358241ca1e1
+  - url: https://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_2/RelValZTTminiaod.root
+    sha256: 4c4ddc418c7131f6eea16ea4bfefa36c2dba8ac2161640bf93b1d7889ce8fa2c
+    folder: data
+  - url: https://cmsshow-rels.web.cern.ch/cmsShow-rels/samples/11_2/RelVallZTTGenSimReco.root
+    sha256: 209e6bda0496892d33137bf67ecb583b233e4c962154b6ca574aa33f824ea532
     folder: data
   - url: http://cmsrep.cern.ch/cmssw/download/Fireworks-Geometry/20200401/cmsGeom2026.root
     sha256: 3077e4d9abd62c57d1d71b30fa968ba52a7c12879a7fc71d90d94c4123e426fa
     folder: data/Fireworks/Geometry/data
 
 build:
-  number: 6
+  number: 1
   skip: True  # [win]
 
 requirements:

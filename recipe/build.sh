@@ -26,9 +26,10 @@ cd ${BLDDIR}
 cmake ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     -DCMAKE_CXX_STANDARD=17 \
-    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
+    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DPYTHON_EXECUTABLE="${PYTHON}" \
+    -DCMakeTools_DIR="${PREFIX}/cmaketools" \
     ../src
 
 make -j${CPU_COUNT}

@@ -1,5 +1,5 @@
 {% set name = "fwlite" %}
-{% set version = "11.2.0" %}
+{% set version = "11.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: 30e0c87a3e921d6b0d829add25565e69fa26b0f4fa38ffdfb9746d0288a31a27
+    sha256: 106e62e9700efbd6005ac117dae2ef5a347010e7ab84492f74e8af14c58c210c
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b
@@ -24,6 +24,9 @@ source:
   - url: http://cmsrep.cern.ch/cmssw/download/Fireworks-Geometry/20200401/cmsGeom2026.root
     sha256: 3077e4d9abd62c57d1d71b30fa968ba52a7c12879a7fc71d90d94c4123e426fa
     folder: data/Fireworks/Geometry/data
+  - url: https://github.com/gartung/cmaketools/archive/refs/tags/1.8-cms.tar.gz
+    sha256: b7f7fbb210dbb9017ed6ddd6aaff61dd9dc1592c63be2f5730c86b0cb8c02285
+    folder: cmaketools
 
 build:
   number: 1
@@ -33,10 +36,11 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
     - cmake
     - git
+    - pkg-config
     - sed
+    - make
     # Required for OpenGL support
     # See https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=cdt#libgl
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
@@ -48,6 +52,7 @@ requirements:
     - boost-cpp 
     - clhep =2.4.1.3
     - cms-md5
+    - fmt
     - hepmc2
     - libsigcpp
     - sigcpp-2.0
@@ -55,6 +60,7 @@ requirements:
     - libjpeg-turbo
     - pybind11
     - python
+    - root
     - root_base
     - tbb
     - tbb-devel
@@ -70,7 +76,6 @@ requirements:
     - zlib
     - zstd
   run:
-    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('clhep', max_pin='x.x.x.x') }}
     - cms-md5
     - hepmc2
@@ -81,11 +86,10 @@ requirements:
     - tbb-devel
     - tinyxml2
     - xorg-libx11  # [linux]
-    - xorg-libxau  # [linux]
-    - xorg-libxcursor  # [linux]
     - xorg-libxext  # [linux]
-    - xorg-libxft  # [linux]
     - xorg-libxpm  # [linux]
+    - xorg-libxft  # [linux]
+    - libgul  # [linux]
     - xz
     - zlib
     - zstd

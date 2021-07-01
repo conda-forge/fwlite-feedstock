@@ -29,7 +29,7 @@ cmake ${CMAKE_ARGS} \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DPYTHON_EXECUTABLE="${PYTHON}" \
-    -DCMakeTools_DIR="${PREFIX}/cmaketools" \
+    -DCMakeTools_DIR="${BLDDIR}/../cmaketools" \
     ../src
 
 make -j${CPU_COUNT}

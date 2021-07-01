@@ -14,10 +14,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '11'
-fortran_compiler:
-- gfortran
-fortran_compiler_version:
-- '9'
+fmt:
+- '7'
 libjpeg_turbo:
 - '2'
 libuuid:
@@ -55,7 +53,6 @@ xz:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-  - fortran_compiler_version
 zlib:
 - '1.2'
 zstd:

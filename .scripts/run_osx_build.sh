@@ -11,7 +11,6 @@ MINIFORGE_HOME=${MINIFORGE_HOME:-${HOME}/miniforge3}
 MINIFORGE_URL="https://github.com/conda-forge/miniforge/releases/latest/download"
 MINIFORGE_FILE="Miniforge3-MacOSX-x86_64.sh"
 curl -L -O "${MINIFORGE_URL}/${MINIFORGE_FILE}"
-
 bash $MINIFORGE_FILE -b -p ${MINIFORGE_HOME}
 
 ( endgroup "Installing a fresh version of Miniforge" ) 2> /dev/null

@@ -9,10 +9,10 @@ PYDOTVER=$(python${PY_VER}-config --libs | sed -E 's@-l@@g'| awk '{print $1}')
 echo $PYDOTVER
 # set graphics library to link
 if [ "$(uname)" == "Linux" ]; then
-    cmake_args="-DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
+    CMAKE_ARGS+=" -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
     export CXXFLAGS="${CXXFLAGS}"
 else
-    cmake_args="-DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
+    CMAKE_ARGS+=" -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
 
     # Remove -std=c++14 from build ${CXXFLAGS} and use cmake to set std flags
     CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')
@@ -23,12 +23,12 @@ export BLDDIR=${PWD}/build-dir
 mkdir -p ${BLDDIR}
 cd ${BLDDIR}
 
-cmake -LAH \
+cmake ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
-    ${cmake_args} \
     -DCMAKE_CXX_STANDARD=17 \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    -DPYTHON_EXECUTABLE="${PYTHON}" \
     ../src
 
 make -j${CPU_COUNT}

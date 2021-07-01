@@ -61,7 +61,6 @@ requirements:
     - pybind11
     - python
     - root
-    - root_base
     - tbb
     - tbb-devel
     - tinyxml2
@@ -82,6 +81,7 @@ requirements:
     - libsigcpp
     - libjpeg-turbo
     - python
+    - root
     - tbb
     - tbb-devel
     - tinyxml2

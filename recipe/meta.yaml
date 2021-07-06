@@ -54,7 +54,6 @@ requirements:
     - cms-md5
     - fmt
     - hepmc2
-    - libsigcpp
     - sigcpp-2.0
     - libuuid
     - libjpeg-turbo
@@ -79,7 +78,7 @@ requirements:
     - {{ pin_compatible('clhep', max_pin='x.x.x.x') }}
     - cms-md5
     - hepmc2
-    - libsigcpp
+    - sigcpp-2.0
     - libjpeg-turbo
     - python
     - root

@@ -71,6 +71,7 @@ requirements:
     - xorg-libxfixes  # [linux]
     - xorg-libxft  # [linux]
     - xorg-libxpm  # [linux]
+    - libglu  # [linux]
     - xz
     - zlib
     - zstd
@@ -89,7 +90,7 @@ requirements:
     - xorg-libxext  # [linux]
     - xorg-libxpm  # [linux]
     - xorg-libxft  # [linux]
-    - libgul  # [linux]
+    - libglu  # [linux]
     - xz
     - zlib
     - zstd

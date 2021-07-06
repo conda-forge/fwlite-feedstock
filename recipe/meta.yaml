@@ -35,6 +35,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - sysroot_linux-64 2.17  # [linux64]
     - {{ compiler('cxx') }}
     - cmake
     - git
@@ -58,19 +59,12 @@ requirements:
     - libuuid
     - libjpeg-turbo
     - pybind11
+    - pybind11-abi
     - python
     - root
     - tbb
     - tbb-devel
     - tinyxml2
-    - xorg-libx11  # [linux]
-    - xorg-libxau  # [linux]
-    - xorg-libxcursor  # [linux]
-    - xorg-libxext  # [linux]
-    - xorg-libxfixes  # [linux]
-    - xorg-libxft  # [linux]
-    - xorg-libxpm  # [linux]
-    - libglu  # [linux]
     - xz
     - zlib
     - zstd
@@ -85,11 +79,6 @@ requirements:
     - tbb
     - tbb-devel
     - tinyxml2
-    - xorg-libx11  # [linux]
-    - xorg-libxext  # [linux]
-    - xorg-libxpm  # [linux]
-    - xorg-libxft  # [linux]
-    - libglu  # [linux]
     - xz
     - zlib
     - zstd

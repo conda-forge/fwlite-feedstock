@@ -52,7 +52,7 @@ requirements:
     - {{ cdt('libxext') }}     # [linux]
   host:
     - boost-cpp 
-    - clhep =2.4.1.3
+    - clhep
     - cms-md5
     - fmt
     - hepmc2
@@ -71,7 +71,7 @@ requirements:
     - zstd
     - xorg-libxfixes  # [linux]
   run:
-    - {{ pin_compatible('clhep', max_pin='x.x.x.x') }}
+    - clhep
     - cms-md5
     - hepmc2
     - sigcpp-2.0

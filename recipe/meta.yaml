@@ -56,7 +56,7 @@ requirements:
     - cms-md5
     - fmt
     - hepmc2
-    - sigcpp-2.0
+    - libsigcpp
     - libuuid
     - libjpeg-turbo
     - pybind11
@@ -74,7 +74,7 @@ requirements:
     - clhep
     - cms-md5
     - hepmc2
-    - sigcpp-2.0
+    - libsigcpp
     - libjpeg-turbo
     - python
     - root

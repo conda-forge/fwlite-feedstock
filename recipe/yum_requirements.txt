@@ -3,4 +3,5 @@ mesa-dri-drivers
 libselinux
 libXdamage
 libXxf86vm
+libXext
 xorg-x11-server-Xvfb

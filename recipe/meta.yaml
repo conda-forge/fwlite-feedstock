@@ -60,9 +60,8 @@ requirements:
     - libuuid
     - libjpeg-turbo
     - pybind11
-    - pybind11-abi
     - python
-    - root
+    - root_base =6.22.8
     - tbb
     - tbb-devel
     - tinyxml2
@@ -77,9 +76,8 @@ requirements:
     - libsigcpp
     - libjpeg-turbo
     - python
-    - root
+    - {{ pin_compatible('root_base', max_pin='x.x.x') }}
     - tbb
-    - tbb-devel
     - tinyxml2
     - xz
     - zlib

@@ -17,9 +17,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '11'
 fmt:
-- '7'
-libjpeg_turbo:
-- '2'
+- '8'
 libuuid:
 - 2.32.1
 macos_machine:
@@ -27,33 +25,21 @@ macos_machine:
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-  libjpeg_turbo:
-    max_pin: x
   libuuid:
     max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
-  xz:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 python:
 - 3.9.* *_cpython
+root_base:
+- 6.24.0
 target_platform:
 - osx-64
-tbb:
-- '2021'
 tbb_devel:
 - '2021'
 tinyxml2:
 - '9'
-xz:
-- '5.2'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-zlib:
-- '1.2'
-zstd:
-- '1.5'

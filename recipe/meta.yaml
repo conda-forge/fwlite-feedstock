@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/fwlite/archive/{{ version }}.tar.gz
-    sha256: 106e62e9700efbd6005ac117dae2ef5a347010e7ab84492f74e8af14c58c210c
+    sha256: dd9e90efeae6cce25b41a49564527a640eeb9a48954ad7a2ccf5e81cd7951c6a
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b
@@ -50,37 +50,31 @@ requirements:
     - {{ cdt('libxxf86vm') }}  # [linux]
     - {{ cdt('libxext') }}     # [linux]
   host:
-    - boost-cpp 
+    - boost-cpp
     - clhep
     - cms-md5
+    - eigen
     - fmt
     - hepmc2
-    - libsigcpp
     - libuuid
-    - libjpeg-turbo
     - pybind11
-    - python
-    - root
-    - tbb
+    - sigcpp-2.0
+    - root_base
     - tbb-devel
     - tinyxml2
-    - xz
-    - zlib
-    - zstd
-    - xorg-libxfixes  # [linux]
   run:
+    - boost-cpp
     - clhep
     - cms-md5
+    - eigen
+    - fmt
     - hepmc2
-    - libsigcpp
-    - libjpeg-turbo
-    - python
-    - {{ pin_compatible('root_base', max_pin='x.x.x') }}
-    - tbb
+    - libuuid
+    - pybind11
+    - sigcpp-2.0
+    - root_base
+    - tbb-devel
     - tinyxml2
-    - xz
-    - zlib
-    - zstd
 
   run_constrained:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]

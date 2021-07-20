@@ -23,13 +23,21 @@ export BLDDIR=${PWD}/build-dir
 mkdir -p ${BLDDIR}
 cd ${BLDDIR}
 
-cmake ${CMAKE_ARGS} \
+env TBB_ROOT="${BUILD_PREFIX}" cmake ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     -DCMAKE_CXX_STANDARD=17 \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-    -DPYTHON_EXECUTABLE="${PYTHON}" \
-    -DCMakeTools_DIR="${BLDDIR}/../cmaketools" \
+    -DCMAKE_MODULE_PATH=$CMAKE_MODULE_PATH;${BUILD_PREFIX}/lib/cmake \
+    -DCMakeTools_DIR="../cmaketools" \
+    -DCMSMD5ROOT="${PREFIX}" \
+    -DTBB_ROOT_DIR="${BUILD_PREFIX}" \
+    -DTBB_INCLUDE_DIR="${BUILD_PREFIX}/include" \
+    -DTBB_LIBRARY=TBB_LIBRARIES \
+    -DPYBIND11_INCLUDE_DIR="${BUILD_PREFIX}/include" \
+    -DEIGEN_INCLUDE_DIR="${BUILD_PREFIX}/include" \
+    -DSIGCPP_INCLUDE_DIR="${PREFIX}/lib/sigc++-2.0/include" \
+    -DGSL_INCLUDE_DIR="${PREFIX}/include/sigc++-2.0" \
     ../src
 
 make -j${CPU_COUNT}

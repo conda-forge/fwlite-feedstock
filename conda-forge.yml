@@ -1,1 +1,6 @@
 conda_forge_output_validation: true
+test_on_native_only: true
+azure:
+  store_build_artifacts: false
+os_version:
+  linux_64: cos7

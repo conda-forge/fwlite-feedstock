@@ -61,7 +61,7 @@ requirements:
     - pybind11 >=2.7.0
     - python
     - sigcpp-2.0
-    - root <6.24
+    - root ==6.22.08
     - tbb-devel >=2021
     - tinyxml2
   run:
@@ -76,7 +76,7 @@ requirements:
     - pybind11 >=2.7.0
     - python
     - sigcpp-2.0
-    - root <6.24
+    - root ==6.22.08
     - tbb-devel >=2021
     - tinyxml2
 

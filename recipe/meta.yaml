@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: 26d166bf9e880d5e4ddc23bf18b1a719a76aa42cfacf1b7c919a33b072cfa722
+    sha256: 86238fe6066068ad04b34994195707d722ed782d9c1cd9520fc64cf3302c4f14
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b
@@ -51,7 +51,7 @@ requirements:
     - {{ cdt('libxext') }}     # [linux]
   host:
     - boost-cpp >=1.76.0
-    - clhep ==2.4.4.0
+    - clhep >=2.4.4.0
     - cms-md5
     - eigen
     - fmt
@@ -66,7 +66,7 @@ requirements:
     - tinyxml2
   run:
     - boost-cpp >=1.76.0
-    - clhep ==2.4.4.0
+    - clhep >=2.4.4.0
     - cms-md5
     - eigen
     - fmt

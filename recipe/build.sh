@@ -5,14 +5,11 @@ set -e
 cp -r src "${PREFIX}"
 cp -rv data "${PREFIX}"
 
-PYDOTVER=$(python${PY_VER}-config --libs | sed -E 's@-l@@g'| awk '{print $1}')
-echo $PYDOTVER
 # set graphics library to link
 if [ "$(uname)" == "Linux" ]; then
-    cmake_args="-DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
     export CXXFLAGS="${CXXFLAGS}"
 else
-    cmake_args="-DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} -DPYDOTVER=${PYDOTVER} -DPYVER=${CONDA_PY}"
+    CMAKE_ARGS+=" -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} -DCMAKE_FIND_FRAMEWORK=LAST -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15"
 
     # Remove -std=c++14 from build ${CXXFLAGS} and use cmake to set std flags
     CXXFLAGS=$(echo "${CXXFLAGS}" | sed -E 's@-std=c\+\+[^ ]+@@g')
@@ -23,12 +20,23 @@ export BLDDIR=${PWD}/build-dir
 mkdir -p ${BLDDIR}
 cd ${BLDDIR}
 
-cmake -LAH \
+cmake ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
-    ${cmake_args} \
     -DCMAKE_CXX_STANDARD=17 \
-    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    -DCMakeTools_DIR="../cmaketools" \
+    -DCMSMD5ROOT="${PREFIX}" \
+    -DTBB_ROOT_DIR="${PREFIX}" \
+    -DTBB_INCLUDE_DIR="${PREFIX}/include" \
+    -DPYBIND11_INCLUDE_DIR="${PREFIX}/include" \
+    -DEIGEN_INCLUDE_DIR="${PREFIX}/include" \
+    -DSIGCPP_LIB_INCLUDE_DIR="${PREFIX}/lib/sigc++-2.0/include" \
+    -DSIGCPP_INCLUDE_DIR="${PREFIX}/include/sigc++-2.0" \
+    -DGSL_INCLUDE_DIR="${PREFIX}/include" \
+    -DPython_ROOT_DIR="${PREFIX}" \
+    -DPython_FIND_STRATEGY=LOCATION \
+    -DPython_FIND_VIRTUALENV=STANDARD \
+    --trace \
     ../src
 
 make -j${CPU_COUNT}

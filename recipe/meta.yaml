@@ -58,7 +58,7 @@ requirements:
     - hepmc2
     - gsl
     - libuuid
-    - pybind11 >=2.7.0
+    - pybind11 >=2.6.2
     - python
     - sigcpp-2.0
     - root ==6.22.08
@@ -73,7 +73,7 @@ requirements:
     - hepmc2
     - gsl
     - libuuid
-    - pybind11 >=2.7.0
+    - pybind11 >=2.6.2
     - python
     - sigcpp-2.0
     - root ==6.22.08

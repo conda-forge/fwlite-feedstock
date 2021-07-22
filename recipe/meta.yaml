@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/gartung/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: 2f82623db2846b5a3c5e1ea5b01ee103462851981f341d42cbf94ea2af0917dc
+    sha256: e7aba31a3b137968430b307dfad416495ec964598e61fc85cf62ed8c107fb23d
     folder: src
   - url: https://github.com/cms-data/Fireworks-Geometry/archive/V07-06-00.tar.gz
     sha256: 93312e7c60525c66c09c86fdc36db401c281b95ccb2d9195d735f84506f5868b

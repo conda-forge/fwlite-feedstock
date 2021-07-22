@@ -33,7 +33,7 @@ cmake ${CMAKE_ARGS} \
     -DSIGCPP_LIB_INCLUDE_DIR="${PREFIX}/lib/sigc++-2.0/include" \
     -DSIGCPP_INCLUDE_DIR="${PREFIX}/include/sigc++-2.0" \
     -DGSL_INCLUDE_DIR="${PREFIX}/include" \
-    -DPython_ROOT_DIR="${PREFIX}" \
+    -LAH \
     ../src
 
 make -j${CPU_COUNT}

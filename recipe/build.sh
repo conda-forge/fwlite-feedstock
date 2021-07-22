@@ -36,7 +36,7 @@ cmake ${CMAKE_ARGS} \
     -DPython_ROOT_DIR="${PREFIX}" \
     -DPython_FIND_STRATEGY=LOCATION \
     -DPython_FIND_VIRTUALENV=STANDARD \
-    -trace \
+    --trace \
     ../src
 
 make -j${CPU_COUNT}

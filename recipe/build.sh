@@ -51,10 +51,6 @@ fi
 cd ${PREFIX}/lib
 ../bin/edmPluginRefresh plugin*${SHLIB_EXT}
 
-cd ${BLDDIR}
-cp -v lib/*.pcm "${PREFIX}"/lib
-cp -v lib/*.rootmap "${PREFIX}"/lib
-
 export CMSSW_VERSION="CMSSW_${PKG_VERSION//./_}"
 
 # Create version.txt expected by cmsShow.exe

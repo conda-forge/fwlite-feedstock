@@ -17,7 +17,7 @@ docker_image:
 fmt:
 - '8'
 gsl:
-- '2.6'
+- '2.7'
 libuuid:
 - 2.32.1
 pin_run_as_build:
